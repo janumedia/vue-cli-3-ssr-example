@@ -9,7 +9,7 @@ yarn install
 
 ### Start server
 ```
-yarn run start
+yarn start
 ```
 
 ### Furhter Reading
