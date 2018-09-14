@@ -1,0 +1,40 @@
+{
+  "name": "vue-cli-3-ssr-example",
+  "description": "Vue Server Side Rendering (SSR) based on Vue-CLI-3",
+  "version": "0.1.0",
+  "author": {
+    "name": "I Nengah Januartha",
+    "email": "janumedia@gmail.com"
+  },
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:server": "cross-env WEBPACK_TARGET=node vue-cli-service build",
+    "build:client": "vue-cli-service build",
+    "start": "yarn build:server && mv dist/vue-ssr-server-bundle.json bundle && yarn build:client && mv bundle dist/vue-ssr-server-bundle.json && nodemon server",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.17",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-unit-jest": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.0.1",
+    "cross-env": "^5.2.0",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.18.4",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack-merge": "^4.1.4",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
