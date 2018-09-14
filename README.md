@@ -2,7 +2,7 @@
 
 Vue Server Side Rendering (SSR) based on Vue-CLI-33
 
-## Project setup
+#### Project setup
 ```
 yarn install
 ```
@@ -11,3 +11,8 @@ yarn install
 ```
 yarn run start
 ```
+
+#### Furhter Reading
+
+[Vue Guide](https://vuejs.org/v2/guide/)
+[Vue SSR Guide](https://ssr.vuejs.org/guide/)
