@@ -3,7 +3,7 @@ const server = express();
 const path = require('path');
 
 const { createBundleRenderer } = require('vue-server-renderer');
-const serverBundle = require('./dist/vue-ssr-server-bundle.json');
+const serverBundle = require('./.bundle/vue-ssr-server-bundle.json');
 const clientManifest = require('./dist/vue-ssr-client-manifest.json');
 const renderer = createBundleRenderer(serverBundle, {
     runInNewContext: false,

@@ -1,4 +1,5 @@
 const merge = require('webpack-merge');
+const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
@@ -6,6 +7,7 @@ const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
 const isServer = process.env.WEBPACK_TARGET === 'node';
 
 module.exports = {
+    outputDir: path.join(__dirname, isServer ? './.bundle' : './dist'),
     configureWebpack: () => ({
         entry: `./src/entry-${ isServer ? 'server' : 'client' }.js`,
         target: isServer ? 'node' : 'web',
