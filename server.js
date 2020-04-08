@@ -31,4 +31,6 @@ server.get('*', (req, res) => {
     })
 });
 
-server.listen(8080); 
+server.listen(8080, function() {
+    console.log("Listening app at http://localhost:8080");
+}); 
